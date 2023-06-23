@@ -8,6 +8,7 @@
 
 ### Import packages -> Pip install **Package** in command prompt
 #!pip install streamlit
+pip install feedparser
 import streamlit as st
 from PIL import Image
 import feedparser
