@@ -13,7 +13,7 @@ from PIL import Image
 from IPython.display import HTML
 
 ### ConocoPhillips Header
-COP_image = Image.open('https://github.com/ecschultz/Conoco/blob/main/COP.jpg')
+# COP_image = Image.open('https://github.com/ecschultz/Conoco/blob/main/COP.jpg')
 
 ### Collect RSS News feed links -> feel free to add feeds to this list
 rawrss = [
@@ -79,7 +79,7 @@ Crude News app *NEWS*
 """)
 
 ### COP Image
-st.image(COP_image, caption='News Updated every ** Minutes')
+# st.image(COP_image, caption='News Updated every ** Minutes')
 
 ### Add RSS Feed Dataframe to the app
 st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
