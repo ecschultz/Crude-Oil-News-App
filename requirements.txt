@@ -3,4 +3,3 @@ Image===1.5.33
 feedparser===6.0.10
 requests=== 2.31.0
 pandas===2.0.2
-HTML===1.16
