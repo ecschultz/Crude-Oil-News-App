@@ -3,27 +3,19 @@
 
 # # Commercial Crude News Aggregator
 
-# ****************************************************************************************************************************
-
-# In[1]:
-
-
-### Words_of_interest = ['energy', 'oil', 'crude', 'natural gas', 'power', 'Shell','Virgin']
-
-
-# In[ ]:
-
-
-
-
-
-# In[4]:
+### Words_of_interest = ['energy', 'oil', 'crude', 'natural gas', 'power', 'Shell']
 
 
 import feedparser
 import pandas as pd
 import streamlit as st
+from PIL import Image
+from IPython.display import HTML
 
+### ConocoPhillips Header
+image = Image.open('C:\\Users\\schulte\\Anaconda3\\Lib\\site-packages\\Crude_News_App\\COP.jpg')
+
+### Collect RSS News feed links -> feel free to add feeds to this list
 rawrss = [
     'https://www.cnbc.com/id/19836768/device/rss',
     'https://www.opec.org/opec_web/en/pressreleases.rss',
@@ -77,10 +69,8 @@ df.style.format({'Link': make_clickable})
 ##result = df.to_html()
 
 
-# In[6]:
 
-
-### Streamlit Web app
+### Streamlit Web app ###
 
 ### Header
 st.write("""
@@ -97,8 +87,6 @@ st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
 
 # Line to run script in command prompt -> python -m streamlit run 
 
-
-# In[ ]:
 
 
 
