@@ -5,9 +5,8 @@
 
 ### Words_of_interest = ['energy', 'oil', 'crude', 'natural gas', 'power', 'Shell']
 
-
-import feedparser
 import pandas as pd
+import feedparser
 import streamlit as st
 from PIL import Image
 from IPython.display import HTML
