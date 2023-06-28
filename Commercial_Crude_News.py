@@ -7,7 +7,7 @@
 
 import streamlit as st
 from PIL import Image
-import feedparser
+#import feedparser
 import requests
 import pandas as pd
 from io import BytesIO
