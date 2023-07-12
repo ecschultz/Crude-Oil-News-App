@@ -66,27 +66,21 @@ def make_clickable(val):
     return '<a href="{}">{}</a>'.format(val,'Link to article')
 
 #df.style.format({'Link': make_clickable})
-
-df['Link'] = df['Link'].apply(make_clickable) #############
-df = df.to_html(escape=False)  #############
-
+df['Link'] = df['Link'].apply(make_clickable)
+df = df.to_html(escape=False)
 ### Streamlit Web app ###
 
 ### Header
 st.write("""
 # COP Crude News 
 Crude News app *NEWS*
-""")
+""", use_container_width = True)
 
 ### COP Image
-st.image(cop_image, caption='News Updated every ** Minutes')
+st.image(cop_image, caption='News Updated every ** Minutes', use_container_width = True)
 
 ### Add RSS Feed Dataframe to the app
-st.write(df, unsafe_allow_html=True) #########################################################
-# st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True) 
-#st.dataframe(df, use_container_width=True)
-# st.dataframe(df.style.applymap(make_clickable, subset=['Link']))
-# st.dataframe(df.style.format({'Link': make_clickable}))
+st.write(df, unsafe_allow_html=True, use_container_width = True) 
 
 # Line to run script in command prompt -> python -m streamlit run 
 
