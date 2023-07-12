@@ -84,8 +84,8 @@ st.image(cop_image, caption='News Updated every ** Minutes')
 
 ### Add RSS Feed Dataframe to the app
 #st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
-st.dataframe(df, use_container_width=True)
-
+#st.dataframe(df, use_container_width=True)
+st.dataframe(df.style.format({'Link': make_clickable}))
 
 # Line to run script in command prompt -> python -m streamlit run 
 
