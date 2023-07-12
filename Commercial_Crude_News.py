@@ -80,7 +80,7 @@ Crude News app *NEWS*
 """)
 
 ### COP Image
-st.image(COP_image, caption='News Updated every ** Minutes')
+st.image(cop_image, caption='News Updated every ** Minutes')
 
 ### Add RSS Feed Dataframe to the app
 # st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
