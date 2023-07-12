@@ -67,7 +67,7 @@ def make_clickable(val):
 
 #df.style.format({'Link': make_clickable})
 
-df['page'] = df['Link'].apply(make_clickable) #############
+df['Link'] = df['Link'].apply(make_clickable) #############
 df = df.to_html(escape=False)  #############
 
 ### Streamlit Web app ###
