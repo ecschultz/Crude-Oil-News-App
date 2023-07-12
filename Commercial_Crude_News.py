@@ -11,7 +11,7 @@ import feedparser
 import requests
 import pandas as pd
 from io import BytesIO
-from IPython.display import HTML
+#from IPython.display import HTML
 
 ### ConocoPhillips Header
 cop_image = 'https://raw.githubusercontent.com/ecschultz/Conoco/main/COP.jpg'
