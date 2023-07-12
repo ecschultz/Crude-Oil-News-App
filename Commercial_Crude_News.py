@@ -83,7 +83,7 @@ Crude News app *NEWS*
 st.image(cop_image, caption='News Updated every ** Minutes')
 
 ### Add RSS Feed Dataframe to the app
-# st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
+st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
 
 
 # Line to run script in command prompt -> python -m streamlit run 
