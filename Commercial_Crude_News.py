@@ -72,7 +72,7 @@ def make_clickable(val):
     return '<a href="{}">{}</a>'.format(val,'Link to article')
 
 df.style.format({'Link': make_clickable})
-#############################################df['Link'] = df['Link'].apply(make_clickable)
+df['Link'] = df['Link'].apply(make_clickable)
 # df = df.to_html(escape=False)
 
 
