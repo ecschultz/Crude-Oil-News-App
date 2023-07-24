@@ -69,7 +69,7 @@ def make_clickable(val):
     return '<a href="{}">{}</a>'.format(val,'Link to article')
 
 df.style.format({'Link': make_clickable})
-df['Link'] = df['Link'].apply(make_clickable)
+#df['Link'] = df['Link'].apply(make_clickable)
 # df = df.to_html(escape=False)
 
 
@@ -83,7 +83,7 @@ Crude News app *NEWS*
 """, use_container_width = True)
 
 ### COP Image
-st.image(cop_image, caption='News Updated every ** Minutes', use_container_width = True)
+st.image(cop_image, caption='News Updated Daily')
 
 ### Add RSS Feed Dataframe to the app
 st.write(df, unsafe_allow_html=True, use_container_width = True) 
