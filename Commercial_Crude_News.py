@@ -61,8 +61,8 @@ df["Source"] = df["HyperLink"].str.split(".").str[1]
 ### Rearrange the column order and add HyperLink column
 df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 
-### Sort the articles by the most recent at the top
-df = df.sort_values(by='Date', ascending=False)
+# ### Sort the articles by the most recent at the top
+# df = df.sort_values(by='Date', ascending=False)
 
 ### create the column clickable_url based on the url column
 def make_clickable(val):
