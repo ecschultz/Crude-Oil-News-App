@@ -65,7 +65,7 @@ df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 df.loc[(df['Summary'].str.len() > 5) & (df['Summary'].str.len() < 100)]
 
 ### Sort the articles by the most recent at the top
-df.sort_values(by='Date', ascending=False)
+df = df.sort_values(by='Date', ascending=False)
 
 ### create the column clickable_url based on the url column
 def make_clickable(val):
