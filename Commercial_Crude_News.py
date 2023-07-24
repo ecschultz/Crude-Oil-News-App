@@ -64,8 +64,8 @@ df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 # ### Setting Character Limit on Summary Column
 # df['Summary'] = df['Summary'].str[:100]
 
-### Sort the articles by the most recent at the top
-df = df.sort_values(by='Date', ascending=False)
+# ### Sort the articles by the most recent at the top
+# df = df.sort_values(by='Date', ascending=False)
 
 ### create the column clickable_url based on the url column
 def make_clickable(val):
