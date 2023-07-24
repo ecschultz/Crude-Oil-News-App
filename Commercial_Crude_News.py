@@ -11,6 +11,8 @@ import feedparser
 import requests
 import pandas as pd
 from io import BytesIO
+import datetime as dt
+from datetime import datetime, timedelta
 #from IPython.display import HTML
 
 ### ConocoPhillips Header
@@ -66,6 +68,14 @@ df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 
 # ### Setting Character Limit on Summary Column
 # df["Summary"] = df["Summary"].str[:100]
+
+
+Day = dt.datetime.today().strftime("%d") # if the column is not in datetime format
+Month = dt.datetime.today().strftime("%b")
+
+df['Date'] = df['Date'].astype('string')
+df = df[df['Date'].str.contains(Day) & df['Date'].str.contains(Month)]
+
 
 ### create the column clickable_url based on the url column
 def make_clickable(val):
