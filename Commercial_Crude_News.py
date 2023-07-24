@@ -71,7 +71,7 @@ df.sort_values(by='Date', ascending=False)
 def make_clickable(val):
     return '<a href="{}">{}</a>'.format(val,'Link to article')
 
-df =df.style.format({'Link': make_clickable})
+df.style.format({'Link': make_clickable})
 df['Link'] = df['Link'].apply(make_clickable)
 # df = df.to_html(escape=False)
 
