@@ -62,7 +62,7 @@ df["Source"] = df["HyperLink"].str.split(".").str[1]
 df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 
 ### Setting Character Limit on Summary Column
-df = df.loc[(df['Summary'].str.len() > 5) & (df['Summary'].str.len() < 100)]
+df = df['Summary'].str.len(:100)
 
 ### Sort the articles by the most recent at the top
 df = df.sort_values(by='Date', ascending=False)
