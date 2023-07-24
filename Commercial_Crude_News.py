@@ -59,7 +59,7 @@ df['HyperLink'] = df['Link']
 df["Source"] = df["HyperLink"].str.split(".").str[1]
 
 # ### Setting Character Limit on Summary Column
-# df['Summary'] = df['Summary'].str[:100]
+# df["Summary"] = df["Summary"].str[:100]
 
 ### Rearrange the column order and add HyperLink column
 df = df[['Date', 'Source','Title', 'Summary', 'Link']]
