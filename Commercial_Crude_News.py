@@ -58,9 +58,6 @@ df['HyperLink'] = df['Link']
 ### Source Column
 df["Source"] = df["HyperLink"].str.split(".").str[1]
 
-### Setting Character Limit on Summary Column
-df['Summary'] = df['Summary'].str[:100]
-
 ### Rearrange the column order and add HyperLink column
 df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 
@@ -74,6 +71,9 @@ def make_clickable(val):
 df.style.format({'Link': make_clickable})
 df['Link'] = df['Link'].apply(make_clickable)
 # df = df.to_html(escape=False)
+
+### Setting Character Limit on Summary Column
+df['Summary'] = df['Summary'].str[:100]
 
 
 
