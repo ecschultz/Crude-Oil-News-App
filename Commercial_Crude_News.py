@@ -72,8 +72,8 @@ df.style.format({'Link': make_clickable})
 df['Link'] = df['Link'].apply(make_clickable)
 # df = df.to_html(escape=False)
 
-### Setting Character Limit on Summary Column
-df = df['Summary'].str[:100]
+# ### Setting Character Limit on Summary Column
+# df = df['Summary'].str[:100]
 
 
 ### Streamlit Web app ###
