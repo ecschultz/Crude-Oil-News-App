@@ -83,7 +83,7 @@ Crude News app *NEWS*
 """, use_container_width = True)
 
 ### COP Image
-st.image(cop_image, caption='News Updated Daily')
+st.image(cop_image, caption='News Updated Daily', use_container_width = True)
 
 ### Add RSS Feed Dataframe to the app
 st.write(df, unsafe_allow_html=True, use_container_width = True) 
