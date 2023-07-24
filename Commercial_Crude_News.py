@@ -11,11 +11,12 @@ import feedparser
 import requests
 import pandas as pd
 from io import BytesIO
-from IPython.display import HTML
+#from IPython.display import HTML
 
 ### ConocoPhillips Header
 cop_image = 'https://raw.githubusercontent.com/ecschultz/Conoco/main/COP.jpg'
 
+### Collect RSS News feed links -> feel free to add feeds to this list
 rawrss = [
     'https://www.cnbc.com/id/19836768/device/rss',
     'https://www.opec.org/opec_web/en/pressreleases.rss',
@@ -71,8 +72,9 @@ def make_clickable(val):
     return '<a href="{}">{}</a>'.format(val,'Link to article')
 
 df.style.format({'Link': make_clickable})
+df['Link'] = df['Link'].apply(make_clickable)
+# df = df.to_html(escape=False)
 
-#result = df.to_html()
 
 
 ### Streamlit Web app ###
