@@ -61,6 +61,9 @@ df["Source"] = df["HyperLink"].str.split(".").str[1]
 ### Rearrange the column order and add HyperLink column
 df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 
+### Setting Character Limit on Summary Column
+df['Summary'] = df['Summary'].str[:100]
+
 ### Sort the articles by the most recent at the top
 df.sort_values(by='Date', ascending=False)
 
@@ -68,12 +71,9 @@ df.sort_values(by='Date', ascending=False)
 def make_clickable(val):
     return '<a href="{}">{}</a>'.format(val,'Link to article')
 
-df.style.format({'Link': make_clickable})
+df =df.style.format({'Link': make_clickable})
 df['Link'] = df['Link'].apply(make_clickable)
 # df = df.to_html(escape=False)
-
-### Setting Character Limit on Summary Column
-df['Summary'] = df['Summary'].str[:100]
 
 
 
