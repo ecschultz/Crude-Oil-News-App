@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Commercial Crude News Aggregator
-
-### Words_of_interest = ['energy', 'oil', 'crude', 'natural gas', 'power', 'Shell']
+                                                    ### Commercial Crude News Aggregator ###
 
 import streamlit as st
 from PIL import Image
@@ -14,6 +12,15 @@ from io import BytesIO
 import datetime as dt
 from datetime import datetime, timedelta
 #from IPython.display import HTML
+
+### Words of interest, pls add as the team sees fit
+Words_of_interest = ['energy', 'oil', 'crude', 'natural gas', 'power', 'Shell', 'Chevron', 'commodity', 'Vitol', 'SLB',\
+                    'Halliburton', 'drillers', 'TC Energy', 'Columbia', 'natural gas', 'gasoline', 'naphtha', 'pipeline',\
+                    'maintenance', 'North Sea','emissions', 'economy', 'propane', 'butane', 'Henry Hub', 'inventories',\
+                    'MMBtu', 'EIA', 'barrel', 'tanker', 'Nigeria','petroleum', 'midstream','refinery', 'refining', 'Brent',\
+                    'West Texas Intermediate', 'Strategic Petroleum Reserve', 'Alaska', 'maritime','Russia', 'Russian',\
+                    'Saudi Arabia', 'UAE', 'OPEC', 'Permian', 'Bakken', 'Eagle Ford', 'Delaware', 'Phillips 66', \
+                    'Pioneer Natural Resources', 'petrochemical', 'offshore', 'rig', 'IMF', 'GDP', 'shale', 'Oil and Gas']
 
 ### ConocoPhillips Header
 cop_image = 'https://raw.githubusercontent.com/ecschultz/Conoco/main/COP.jpg'
@@ -73,9 +80,10 @@ df = df[['Date', 'Source','Title', 'Summary', 'Link']]
 Day = dt.datetime.today().strftime("%d") # if the column is not in datetime format
 Month = dt.datetime.today().strftime("%b")
 
-df['Date'] = df['Date'].astype('string')
+df['Date'] = df['Date'].astype('string')   # Find all dates w/ month and date of today
 df = df[df['Date'].str.contains(Day) & df['Date'].str.contains(Month)]
 
+df = df.loc[df['Title'].apply(lambda x: any(w in x for w in Words_of_interest))]    # Filter df for only words of interest
 
 ### create the column clickable_url based on the url column
 def make_clickable(val):
@@ -87,7 +95,7 @@ df['Link'] = df['Link'].apply(make_clickable)
 
 
 
-### Streamlit Web app ###
+    ### Streamlit Web app deployment ###
 
 ### Header
 st.write("""
