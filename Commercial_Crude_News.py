@@ -49,13 +49,13 @@ rawrss = [
     'http://search.yahoo.com/mrss/',
     'https://www.reutersagency.com/feed/?best-sectors=commodities-energy&#038;post_type=best" rel="self" type="application/rss+xml',
 
-    'https://www.spglobal.com/commodityinsights/en/rss-feed/oil',
-    'https://www.spglobal.com/commodityinsights/en/rss-feed/blogs',
-    'https://www.cer-rec.gc.ca/rss/rssfd.aspx?l=e&c=catNR',
-    'https://www.cer-rec.gc.ca/rss/rssfd.aspx?l=e&c=catER',
-    'https://www.eia.gov/rss/todayinenergy.xml',
-    'https://www.eia.gov/petroleum/weekly/includes/week_in_petroleum_rss.xml',
-    'https://www.eia.gov/rss/press_rss.xml',
+    # 'https://www.spglobal.com/commodityinsights/en/rss-feed/oil',
+    # 'https://www.spglobal.com/commodityinsights/en/rss-feed/blogs',
+    # 'https://www.cer-rec.gc.ca/rss/rssfd.aspx?l=e&c=catNR',
+    # 'https://www.cer-rec.gc.ca/rss/rssfd.aspx?l=e&c=catER',
+    # 'https://www.eia.gov/rss/todayinenergy.xml',
+    # 'https://www.eia.gov/petroleum/weekly/includes/week_in_petroleum_rss.xml',
+    # 'https://www.eia.gov/rss/press_rss.xml',
     
     ]  
 
